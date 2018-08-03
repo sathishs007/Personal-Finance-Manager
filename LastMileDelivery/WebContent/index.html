@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="app.MYApp">
+
+<head>
+<meta charset="UTF-8">
+<title>Login/Register for Crowd Sourced Last Mile Delivery</title>
+</head>
+<body>
+	<script>
+		document.write('<base href="' + document.location + '" />');
+	</script>
+	<script src="./js/angular.js"></script>
+	<script src="./js/angular-route.js"></script>
+	<script data-require="lodash-underscore@*" data-semver="2.4.1"
+		src="https://rawgit.com/lodash/lodash/2.4.1/dist/lodash.underscore.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyBoc-NmZjDYHKPTiGXE9J5caFoKNYTBONI&sensor=false"></script>
+    <script data-require="angular-google-maps@*" data-semver="1.1.4" src="https://rawgit.com/nlaplante/angular-google-maps/1.1.4/dist/angular-google-maps.min.js"></script>  
+	<script src="app.js"></script>
+	<script src="src/header/HeaderController.js"></script>
+	<script src="src/ajaxFactory/ajaxFactory.js"></script>
+	<script src="src/login/LoginController.js"></script>
+	<script src="src/register/RegisterController.js"></script>
+	<script src="src/delivery/DeliveryController.js"></script>
+	<script src="src/tmdashBoard/DashBoardController.js"></script>
+	<script src="src/tmdashBoard/DriverDashBoardController.js"></script>
+	<div>
+		<div data-ng-view></div>
+	</div>
+	
+</body>
+</html>

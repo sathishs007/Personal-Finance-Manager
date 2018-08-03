@@ -1,0 +1,219 @@
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css'>
+<link rel="stylesheet" href="css/style.css">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+        $('#btnSubmit').click(function(e) {
+            var isValid1 = true;
+            $('input[type="password"]').each(function() {
+                if ($.trim($(this).val()) == '') {
+                    isValid1 = false;
+                    $(this).css({
+                        
+                        "border-bottom": "1px solid #F44336",
+                    "box-shadow": "0 1px 0 0 #F44336"
+                    });
+                } else {
+                    $(this).css({
+                        "border-bottom" : "",
+                        "box-shadow" : ""
+                    });
+                }
+            });
+            if (isValid1 == false)
+                e.preventDefault();
+
+        });
+        
+        $('#btnSubmit').click(function(e) {
+            var isValid1 = true;
+            $('input[type="email"]').each(function() {
+                if ($.trim($(this).val()) == '') {
+                    isValid1 = false;
+                    $(this).css({
+                        
+                        "border-bottom": "1px solid #F44336",
+                    "box-shadow": "0 1px 0 0 #F44336"
+                    });
+                } else {
+                    $(this).css({
+                        "border-bottom" : "",
+                        "box-shadow" : ""
+                    });
+                }
+            });
+            if (isValid1 == false)
+                e.preventDefault();
+
+        });
+        
+        $('#btnSubmit').click(function(e) {
+            var isValid1 = true;
+            $('input[type="text"]').each(function() {
+                if ($.trim($(this).val()) == '') {
+                    isValid1 = false;
+                    $(this).css({
+                        
+                        "border-bottom": "1px solid #F44336",
+                    "box-shadow": "0 1px 0 0 #F44336"
+                    });
+                } else {
+                    $(this).css({
+                        "border-bottom" : "",
+                        "box-shadow" : ""
+                    });
+                }
+            });
+            if (isValid1 == false)
+                e.preventDefault();
+
+        });
+    });
+
+</script>
+<div id="register" class="col s12">
+        <form class="col s12" data-ng-novalidate="" name="regform" data-ng-submit="regSubmit(regform)">        
+            <div class="form-container">
+                <h3 class="teal-text">Welcome to the Driver's Portal Registration</h3>
+                <h3 class="teal-text">Personal Details</h3>
+                <div class="row">
+                    <div class="input-field col s6">
+                    	<label for="firstName">First Name*</label> 
+                        <input id="firstName" type="text"  name="firstNames" class="validate" data-ng-model="regform.firstName" data-ng-required="true" required>                        
+                    </div>
+                    <div class="input-field col s6">
+                        <label for="lastName">Last Name*</label>
+                        <input id="lastName" type="text" name="lastNames" class="validate" data-ng-model="regform.lastName" data-ng-required="true" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                    	<label for="gender">Gender*</label>
+                        <input id="gender" type="text"  name="genders" class="validate" data-ng-model="regform.gender" data-ng-required="true" required>                        
+                    </div>
+                 </div>
+                 <div class="row">
+                    <div class="input-field col s6">
+                    	<label for="age">Age*</label>
+                        <input id="age" type="text"  name="ages" class="validate" data-ng-model="regform.age" data-ng-required="true" required>                        
+                    </div>
+                 </div>
+                 <div class="row">
+                    <div class="input-field col s6">
+                    	<label for="nationality">Nationality*</label>
+                        <input id="nationality" type="text"  name="nationalitys" class="validate" data-ng-model="regform.nationality" data-ng-required="true" required>                        
+                    </div>
+                 </div>
+                 <div class="row">
+                    <div class="input-field col s6">
+                    	<label for="address">Address*</label>
+                        <input id="address" type="text"  name="addresss" class="validate" data-ng-model="regform.address" data-ng-required="true" required>                        
+                    </div>
+                 </div>
+                 <div class="row">
+                    <div class="input-field col s6">
+                    	<label for="mobileno">Mobile Number*</label>
+                        <input id="mobileno" type="text"  name="mobilenos" class="validate" data-ng-model="regform.mobileno" data-ng-required="true" required>                        
+                    </div>
+                 </div>
+                 <br/>
+                 <h3 class="teal-text">Driving License Details</h3>
+                 <div class="row">
+                    <div class="input-field col s6">
+                    	<label for="drivingLicenceNumber">Driving License Number*</label>
+                        <input id="drivingLicenceNumber" type="text"  name="drivingLicenceNumbers" class="validate" data-ng-model="regform.drivingLicenceNumber" data-ng-required="true" required>                        
+                    </div>
+                 </div>
+                 <div class="row">
+                    <div class="input-field col s6">
+                    	<label for="ssn">SSN*</label>
+                        <input id="ssn" type="text"  name="ssns" class="validate" data-ng-model="regform.ssn" data-ng-required="true" required>                        
+                    </div>
+                 </div>
+                 <div class="row">
+                    <div class="input-field col s6">
+                    	<label for="vehicleMake">Vehicle Make*</label>
+                        <input id="vehicleMake" type="text"  name="vehicleMakes" class="validate" data-ng-model="regform.vehicleMake" data-ng-required="true" required>                        
+                    </div>
+                 </div>
+                 <div class="row">
+                    <div class="input-field col s6">
+                    	<label for="vehicleModel">Vehicle Model*</label>
+                        <input id="vehicleModel" type="text"  name="vehicleModels" class="validate" data-ng-model="regform.vehicleModel" data-ng-required="true" required>                        
+                    </div>
+                 </div>
+                 <div class="row">
+                    <div class="input-field col s6">
+                    	<label for="drivingInsuranceDetails">Driving Insurance Details*</label>
+                        <input id="drivingInsuranceDetails" type="text"  name="drivingInsuranceDetailss" class="validate" data-ng-model="regform.drivingInsuranceDetails" data-ng-required="true" required>                        
+                    </div>
+                 </div>
+                 <div class="row">
+                    <div class="input-field col s6">
+                    	<label for="truckCapacity">Truck Capacity*</label>
+                        <input id="truckCapacity" type="text"  name="truckCapacitys" class="validate" data-ng-model="regform.truckCapacity" data-ng-required="true" required>                        
+                    </div>
+                 </div>
+                 <div class="row">
+                    <div class="input-field col s6">
+                    	<label for="truckDimensions">Truck Dimensions*</label>
+                        <input id="truckDimensions" type="text"  name="truckDimensionss" class="validate" data-ng-model="regform.truckDimensions" data-ng-required="true" required>                        
+                    </div>
+                 </div>
+                 <br/>
+                <h3 class="teal-text">Bank Account Details</h3>
+                <div class="row">
+                    <div class="input-field col s6">
+                    	<label for="bankAccountNumber">Bank Account Number*</label>
+                        <input id="bankAccountNumber" type="text"  name="bankAccountNumbers" class="validate" data-ng-model="regform.bankAccountNumber" data-ng-required="true" required>                        
+                    </div>
+                 </div>
+                 <div class="row">
+                    <div class="input-field col s6">
+                    	<label for="ifscCode">IFSC Code*</label>
+                        <input id="ifscCode" type="text"  name="ifscCodes" class="validate" data-ng-model="regform.ifscCode" data-ng-required="true" required>                        
+                    </div>
+                 </div>
+                <br/> 
+                <h3 class="teal-text">Login Details</h3>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <label for="emailId">Email*</label>
+                        <input id="emailId" type="email" name="emailIds" class="validate" data-ng-model="regform.emailId" data-ng-pattern="/^[a-z]+[a-z0-9._]+@[a-z]+\.[a-z.]{2,5}$/" data-ng-required="true" data-ng-oncopy="return false" data-ng-onpaste="return false" required>                        
+                    </div>
+                </div><!-- 
+                <div class="row">
+                    <div class="input-field col s12">
+                        <label for="email-confirm">Email Confirmation*</label>
+                        <input id="email-confirm" type="email" name="email_confirms" class="validate" data-ng-model="regform.email_confirm" data-ng-pattern="/^[a-z]+[a-z0-9._]+@[a-z]+\.[a-z.]{2,5}$/" data-ng-required="true" data-ng-oncopy="return false" data-ng-onpaste="return false" required>                        
+                        <span data-ng-if="emailMessage" style="color:red">email is not matched</span>
+                    </div>
+                </div> -->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <label for="password">Password*</label>
+                        <input id="password" type="password" name="passwords" class="validate" data-ng-model="regform.password" maxlength="8" data-ng-required="true" data-ng-oncopy="return false" data-ng-onpaste="return false" required>                        
+                    </div>
+                </div>
+                <!-- <div class="row">
+                    <div class="input-field col s12">
+                    <label for="password-confirm">Password Confirmation*</label>
+                        <input id="password-confirm" type="password" name="password_confirms" class="validate" data-ng-model="regform.password_confirm" maxlength="8" data-ng-required="true" data-ng-oncopy="return false" data-ng-onpaste="return false" required>                        
+                        <span data-ng-if="passwordMessage" style="color:red"> Password is not matched</span>
+                    </div>
+                </div> -->
+                <br/>
+                <div class="row">
+                    <div class="input-field col s12">
+                		<label for="upload">Upload Documents*</label>
+						<input type="file" name="upload1" id="upload1">
+						<button class="btn waves-effect waves-light teal" type="submit"  id="btnSubmitUpload">Upload</button>
+						</div>
+                </div>
+                <br/>
+                <div class="center">
+                    <button class="btn waves-effect waves-light teal" type="submit"  id="btnSubmit">Submit</button>
+                </div>                
+            </div>
+        </form>
+    </div>

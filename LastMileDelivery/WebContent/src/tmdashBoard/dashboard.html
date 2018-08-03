@@ -1,0 +1,77 @@
+<style>
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+</style>
+<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script src="dist/ng-map.min.js"></script>`
+ <script src="https://code.angularjs.org/1.3.15/angular.js"></script>
+ <script src="https://maps.googleapis.com/maps/api/js" ></script>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <!-- Data loader End --> 
+ <!-- User Table  start --> 
+        <div data-ng-hide="dataLoader">
+           <div style="text-align: center;font-size: 24px;margin-top: 5%;text-transform: uppercase;">Scheduled Delivery Details</div>
+          
+  <br/>
+            <table class="table table-striped table-condensed table-hover">
+         
+                <thead>
+                     <tr>
+                        <th class="id" >S.NO</th>
+                        <th class="field1" >PickUp Location</th>
+                        <th class="field2" >Delivery Location</th>
+                        <th class="field3" >Weight and Dimensions</th>
+                        <th class="field4" >Special Requests</th>
+                        
+                        <th class="field5" >BUId</th>
+                        <th class="field6" >Bidding Start Quote Price</th>
+                        <th class="field7" >Bidding Status</th>
+                        <th class="field8" >Negotiation Terms and Conditions</th>
+                        
+                        <th class="field9" >Drivers Quoted Price</th>
+                        <th class="field10" >Selected Driver Email</th>
+                        <th class="field11" >Delivery Status</th>
+                        <th class="field12" >Payment Status</th>
+                    </tr>
+                </thead>
+                <tfoot></tfoot>               
+               <tbody>
+                    <tr data-ng-repeat="item in packgeList">
+                        <td>{{ $index + 1 }}</td>                         
+                       <td>{{item.pickupLocation}}</td>
+                       <td>{{item.deliveryLocation}}</td>
+                       <td>{{item.weightyAndDimensions}}</td>
+                       <td>{{item.specialRequest}}</td>
+                       <td>{{item.buid}}</td>
+                       <td>{{item.bidStartQuotePrice}}</td>
+                       <td>{{item.biddingStatus}}</td>
+                       <td>{{item.negotiationTemrsAndCondition}}</td>
+                       <td>{{item.driversQuotedPrice}}</td>
+                       <td>{{item.selectedDriverEmail}}</td>
+                       <td>{{item.deliveryStatus}}</td>
+                       <td>{{item.paymentStatus}}</td>
+                    </tr>
+                </tbody>  
+            </table>
+            <p> <a href="/#/delivery">Add Scheduled Delivery </a> </p>            
+            </div>
+           
